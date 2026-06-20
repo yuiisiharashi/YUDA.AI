@@ -1,3 +1,4 @@
+
 const API_KEY = "AQ.Ab8RN6IelObH3ZZOHO3L1hxrba_0va6J55uXRk2qfGguvQiFDQ";
 
 const chatBox = document.getElementById("chatBox");
@@ -6,11 +7,6 @@ const sendBtn = document.getElementById("sendBtn");
 const newChat = document.getElementById("newChat");
 
 console.log("YUDA AI JS masuk");
-
-const userInput = document.getElementById("userInput");
-const sendBtn = document.getElementById("sendBtn");
-const newChat = document.getElementById("newChat");
-
 
 async function kirimPesan() {
 
