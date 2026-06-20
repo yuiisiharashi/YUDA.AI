@@ -1,4 +1,4 @@
-const API_KEY = AQ.Ab8RN6KqSx9V5YmG_z9WafgZ35-J6FPeU2CdLXAV2ATkbMoGiQ
+const APIKEY = AQ.Ab8RN6KqSx9V5YmG_z9WafgZ35-J6FPeU2CdLXAV2ATkbMoGiQ
 
 const chatBox = document.getElementById("chatBox");
 const userInput = document.getElementById("userInput");
