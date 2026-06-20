@@ -27,15 +27,55 @@ function kirimPesan() {
 
     setTimeout(() => {
         document.getElementById("typing").remove();
+async function kirimPesan() {
+    const text = userInput.value.trim();
 
-        chatBox.innerHTML += `
-            <div class="message ai">
-                Terima kasih. Fitur AI masih dalam pengembangan. Nantinya saya akan bisa menjawab pertanyaan seperti asisten AI modern.
-            </div>
-        `;
+    if (text === "") return;
 
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }, 1200);
+    chatBox.innerHTML += `
+        <div class="message user">${text}</div>
+    `;
+
+    userInput.value = "";
+
+    chatBox.innerHTML += `
+        <div class="message ai" id="typing">
+            YUDA.AI sedang mengetik...
+        </div>
+    `;
+
+    const res = await fetch(
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + API_KEY,
+    {
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            contents:[{
+                parts:[{
+                    text:`Kamu adalah YUDA.AI. Jawab dengan santai.
+                    
+Pertanyaan:
+${text}`
+                }]
+            }]
+        })
+    });
+
+    const data = await res.json();
+
+    document.getElementById("typing").remove();
+
+    chatBox.innerHTML += `
+        <div class="message ai">
+            ${data.candidates[0].content.parts[0].text}
+        </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+        
 }
 
 sendBtn.onclick = kirimPesan;
