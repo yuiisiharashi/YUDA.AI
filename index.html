@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YUDA.AI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.logo{
+    font-size:5rem;
+    font-weight:bold;
+    color:#00e5ff;
+    text-shadow:0 0 10px #00e5ff,
+                 0 0 20px #00e5ff,
+                 0 0 40px #00e5ff;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00e5ff;
+    }
+    to{
+        text-shadow:0 0 20px #00e5ff,
+                    0 0 40px #00e5ff,
+                    0 0 80px #00e5ff;
+    }
+}
+
+.tagline{
+    margin-top:20px;
+    font-size:1.3rem;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    background:#00bcd4;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #00e5ff;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:50px 20px;
+}
+
+.card{
+    width:280px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(0,229,255,.5);
+}
+
+.card h3{
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1 class="logo">YUDA.AI</h1>
+    <p class="tagline">
+        Teknologi AI Futuristik untuk Generasi Masa Depan
+    </p>
+
+    <a href="#" class="btn">Mulai Sekarang</a>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>🤖 AI Assistant</h3>
+        <p>Menjawab pertanyaan dan membantu pekerjaan sehari-hari.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Super Fast</h3>
+        <p>Respon cepat dengan teknologi AI modern.</p>
+    </div>
+
+    <div class="card">
+        <h3>🔒 Secure</h3>
+        <p>Data dan privasi pengguna lebih aman.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 YUDA.AI - Future Intelligence
+</footer>
+
+</body>
+</html>
